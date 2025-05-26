@@ -9,12 +9,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Source+Serif+4:wght@300;400;500&display=swap" rel="stylesheet">
 
+  <link rel="icon" href="fort.png" type="image/png">
+
   <style>
     /* Base Body Styles: Softening the background and text colors for a gentler feel. */
     body {
       margin: 0;
       padding: 0;
-      background: #0f0f0f; /* Slightly softer dark background than pure black */
+      /* Defines a very large linear gradient that we'll slowly move */
+      background: linear-gradient(135deg, #0f0f0f, #121212, #0f0f0f, #111111);
+      background-size: 400% 400%; /* Makes the gradient much larger than the viewport */
+      animation: backgroundPulse 60s ease infinite alternate; /* 60s for a very slow breath, infinite, alternating */
+
       color: #e0e0e0; /* A soft, off-white for main text, easier on the eyes than bright white */
       font-family: 'Source Serif 4', Georgia, serif; /* Primary font for body text */
       line-height: 1.7; /* Slightly adjusted line height for better readability */
@@ -28,10 +34,20 @@
       animation: fadeIn 1.8s forwards ease-out; /* 1.8 seconds, smooth end */
     }
 
-    /* Keyframe for the fade-in animation */
+    /* Keyframe for the main content fade-in animation */
     @keyframes fadeIn {
       to {
         opacity: 1;
+      }
+    }
+
+    /* Keyframe for background pulse animation */
+    @keyframes backgroundPulse {
+      0% {
+        background-position: 0% 50%; /* Start position */
+      }
+      100% {
+        background-position: 100% 50%; /* End position, creating a horizontal drift */
       }
     }
 
@@ -162,6 +178,14 @@
       }
     }
   </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WBSNLM4Q0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0WBSNLM4Q0');
+  </script>
 </head>
 <body>
   <h1>The Fort That Holds</h1>
