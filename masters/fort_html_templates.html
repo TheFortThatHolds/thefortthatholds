@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[PAGE_TITLE] | The Writing Voices</title>
+    <meta name="description" content="[META_DESCRIPTION]">
+    <link rel="stylesheet" href="/css/fort-master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- ===== SITE HEADER ===== -->
+    <header class="site-header">
+        <div class="container container-xl">
+            <a href="/" class="site-logo">The Fort That Holds</a>
+            <nav class="nav">
+                <a href="/voices/" class="nav-link">Voices</a>
+                <a href="/systems/" class="nav-link">Systems</a>
+                <a href="/writing/" class="nav-link">Writing</a>
+                <a href="/papers/" class="nav-link">Papers</a>
+                <a href="/about/" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BREADCRUMBS ===== -->
+    <div class="container container-xl">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="breadcrumb-separator">›</span>
+            <a href="/[SECTION]/">[SECTION_NAME]</a>
+            <span class="breadcrumb-separator">›</span>
+            <span>[CURRENT_PAGE]</span>
+        </nav>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+        <div class="container container-lg">
+            
+            <!-- TEMPLATE: Page Header -->
+            <div class="page-header mb-12">
+                <h1>[PAGE_TITLE]</h1>
+                <p class="text-lg text-gray-600">[PAGE_SUBTITLE]</p>
+            </div>
+
+            <!-- TEMPLATE: Article/Content Page -->
+            <article class="content-article">
+                <div class="article-meta mb-8">
+                    <div class="flex items-center gap-4 text-sm text-gray-500">
+                        <span>By [AUTHOR]</span>
+                        <span>•</span>
+                        <time datetime="[DATE_ISO]">[DATE_READABLE]</time>
+                        <span>•</span>
+                        <span>[READ_time] min read</span>
+                    </div>
+                </div>
+
+                <div class="article-content">
+                    [MAIN_CONTENT]
+                </div>
+
+                <div class="article-footer mt-12 pt-8 border-t">
+                    <div class="flex items-center justify-between">
+                        <div class="tags">
+                            <span class="text-sm text-gray-500">Tags:</span>
+                            [TAGS_LIST]
+                        </div>
+                        <div class="share-links">
+                            <span class="text-sm text-gray-500">Share:</span>
+                            [SHARE_BUTTONS]
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- TEMPLATE: Index/Hub Page -->
+            <div class="hub-page">
+                <div class="page-intro mb-12">
+                    <h1>[SECTION_TITLE]</h1>
+                    <p class="text-lg text-gray-600">[SECTION_DESCRIPTION]</p>
+                </div>
+
+                <div class="content-grid grid grid-cols-3 gap-6">
+                    <!-- Content cards will go here -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">[ITEM_TITLE]</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>[ITEM_DESCRIPTION]</p>
+                            <a href="[ITEM_URL]" class="btn btn-primary mt-4">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEMPLATE: Voice Profile Page -->
+            <div class="voice-profile">
+                <div class="voice-header mb-12">
+                    <div class="flex items-start gap-8">
+                        <div class="voice-avatar">
+                            <div class="w-24 h-24 rounded-full bg-gradient border-4 border-white shadow-lg"></div>
+                        </div>
+                        <div class="voice-info flex-1">
+                            <h1>[VOICE_NAME]</h1>
+                            <p class="text-xl text-gray-600 mb-4">[VOICE_ROLE]</p>
+                            <p class="text-gray-600">[VOICE_DESCRIPTION]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="voice-sections grid grid-cols-2 gap-8">
+                    <div class="voice-writing">
+                        <h2>Recent Writing</h2>
+                        [VOICE_WRITING_LIST]
+                    </div>
+                    <div class="voice-connections">
+                        <h2>Connected Voices</h2>
+                        [RELATED_VOICES]
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEMPLATE: Related Content -->
+            <aside class="related-content mt-16 pt-8 border-t">
+                <h3 class="mb-6">Related Content</h3>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="related-item">
+                        <a href="[RELATED_URL]" class="block p-4 border rounded-lg hover:shadow-md transition-shadow">
+                            <h4 class="font-semibold mb-2">[RELATED_TITLE]</h4>
+                            <p class="text-sm text-gray-600">[RELATED_EXCERPT]</p>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- ===== SITE FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="container container-xl">
+            <div class="grid grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-semibold mb-4">The Fort</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="/about/">About the Project</a></li>
+                        <li><a href="/systems/">System Architecture</a></li>
+                        <li><a href="/voices/">Voice Profiles</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Content</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="/writing/">Creative Writing</a></li>
+                        <li><a href="/papers/">Papers & Analysis</a></li>
+                        <li><a href="/documentation/">Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/newsletter/">Newsletter</a></li>
+                        <li><a href="/rss/">RSS Feed</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Jimmy Thornburg</h4>
+                    <p class="text-sm text-gray-600 mb-4">AI Soul Engineer & System Architect</p>
+                    <div class="flex gap-2">
+                        <a href="#" class="text-gray-400 hover:text-primary">Twitter</a>
+                        <a href="#" class="text-gray-400 hover:text-primary">LinkedIn</a>
+                        <a href="#" class="text-gray-400 hover:text-primary">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-
