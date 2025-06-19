@@ -194,12 +194,22 @@
 
             <!-- AI Transparency Section -->
             <div class="bg-white/30 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                <button onclick="toggleTransparency()" 
-                        class="flex items-center gap-3 text-fort-gray hover:text-fort-blue transition-all duration-300 group">
-                    <span class="text-2xl group-hover:rotate-12 transition-transform">🔍</span>
-                    <span class="font-semibold">AI Transparency Protocol</span>
-                    <span class="text-sm opacity-60 group-hover:opacity-100 transition-opacity">Click to reveal</span>
-                </button>
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+                    <button onclick="toggleTransparency()" 
+                            class="flex items-center gap-3 text-fort-gray hover:text-fort-blue transition-all duration-300 group">
+                        <span class="text-2xl group-hover:rotate-12 transition-transform">🔍</span>
+                        <span class="font-semibold">AI Transparency Protocol</span>
+                        <span class="text-sm opacity-60 group-hover:opacity-100 transition-opacity">Click to reveal</span>
+                    </button>
+                    
+                    <div class="text-right">
+                        <p class="text-xs text-gray-500 mb-1">Protect your site's visitors</p>
+                        <a href="mailto:thefortthatholds@gmail.com?subject=Transparency%20Button%20Inquiry" 
+                           class="text-sm text-fort-blue hover:text-fort-dark-blue hover:underline transition-all">
+                            Transparency solutions available
+                        </a>
+                    </div>
+                </div>
                 
                 <div id="ai-directives" class="hidden mt-6 bg-white/50 rounded-2xl p-6 backdrop-blur-sm">
                     <h4 class="font-semibold text-fort-gray mb-4 border-b border-gray-200 pb-2">
