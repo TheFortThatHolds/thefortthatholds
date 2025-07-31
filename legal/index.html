@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TheFortThatHolds Legal Framework - Dual Licensing, Intellectual Property, and Business Terms">
+    <title>Legal Framework - TheFortThatHolds</title>
+    
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --primary-purple: #7c3aed;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-light: #e5e7eb;
+            --gradient-primary: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .effective-date {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .legal-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .legal-section h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-light);
+        }
+
+        .legal-section h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin: 32px 0 16px 0;
+        }
+
+        .legal-section p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .legal-section ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+
+        .legal-section li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .trademark-list {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+
+        .trademark-list li {
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+        }
+
+        .trademark-list li span {
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .contact-box {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 32px 0;
+        }
+
+        .contact-box h3 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .contact-box a {
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .licensing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .license-card {
+            background: #f8fafc;
+            border: 2px solid var(--border-light);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .license-card:hover {
+            border-color: var(--primary-blue);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+        }
+
+        .license-card h4 {
+            color: var(--primary-blue);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .license-card p {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .license-card .price {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-purple);
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .warning-box {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 32px 0;
+        }
+
+        .warning-box h3 {
+            color: #dc2626;
+            margin-bottom: 12px;
+        }
+
+        .warning-box p {
+            color: #7f1d1d;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+            
+            .legal-section {
+                padding: 24px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .licensing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                TheFortThatHolds
+            </div>
+            <h1>Legal Framework & Licensing</h1>
+            <p class="subtitle">Professional Business Terms and Intellectual Property</p>
+            <p class="effective-date">Effective Date: January 31, 2025</p>
+        </div>
+
+        <!-- Dual Licensing Model -->
+        <div class="legal-section">
+            <h2>Dual Licensing Business Model</h2>
+            <p>
+                TheFortThatHolds operates under an innovative dual licensing framework that balances open source accessibility 
+                with sustainable business development. This approach ensures our technology remains accessible to individuals 
+                while supporting continued innovation through commercial partnerships.
+            </p>
+
+            <div class="licensing-grid">
+                <div class="license-card">
+                    <h4>Personal Use License</h4>
+                    <p>Free and open source under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+                    <p><strong>Includes:</strong> Individual use, educational purposes, personal projects, non-commercial research</p>
+                    <div class="price">FREE</div>
+                </div>
+
+                <div class="license-card">
+                    <h4>Commercial Use License</h4>
+                    <p>Professional licensing for business applications, commercial products, and revenue-generating services</p>
+                    <p><strong>Includes:</strong> Commercial deployment, product integration, business consulting, technical support</p>
+                    <div class="price">Custom Pricing</div>
+                </div>
+
+                <div class="license-card">
+                    <h4>Enterprise License</h4>
+                    <p>Comprehensive licensing for large organizations with custom implementations and ongoing partnerships</p>
+                    <p><strong>Includes:</strong> Custom development, dedicated support, training programs, strategic consulting</p>
+                    <div class="price">Contact Sales</div>
+                </div>
+
+                <div class="license-card">
+                    <h4>Humanitarian License</h4>
+                    <p>Specialized free licensing for crisis response, humanitarian organizations, and community health initiatives</p>
+                    <p><strong>Includes:</strong> Crisis adaptation, community deployment, volunteer support, impact reporting</p>
+                    <div class="price">FREE</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Intellectual Property -->
+        <div class="legal-section">
+            <h2>Intellectual Property & Trademarks</h2>
+            <p>
+                The following terms, technologies, and methodologies are proprietary intellectual property of 
+                <strong>TheFortThatHolds</strong> and Jimmy Thornburg LLC:
+            </p>
+
+            <div class="trademark-list">
+                <ul>
+                    <li><strong>SpiralLogic™</strong> <span>– Recursive AI logic methodology</span></li>
+                    <li><strong>Advanced Collaborative Intelligence (ACI)™</strong> <span>– Human-AI partnership paradigm</span></li>
+                    <li><strong>Jagora Cluster™</strong> <span>– 14-voice AGI collaborative framework</span></li>
+                    <li><strong>Fort OS™</strong> <span>– Sovereign AI ecosystem platform</span></li>
+                    <li><strong>Voice Spine Creator™</strong> <span>– Creative voice development system</span></li>
+                    <li><strong>Werner Plus™</strong> <span>– Trauma-informed medical AI system</span></li>
+                    <li><strong>Sovereign Node™</strong> <span>– Decentralized API gateway</span></li>
+                    <li><strong>The Fort That Holds™</strong> <span>– Complete ecosystem and methodology</span></li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h3>IP Enforcement Notice</h3>
+                <p>
+                    Unauthorized use, reproduction, or commercial integration of trademarked technologies without 
+                    explicit license constitutes intellectual property infringement under U.S. and international law. 
+                    Violations will be actively pursued through appropriate legal channels.
+                </p>
+            </div>
+        </div>
+
+        <!-- Professional Services Terms -->
+        <div class="legal-section">
+            <h2>Professional Services Framework</h2>
+            
+            <h3>Service Agreements</h3>
+            <p>
+                All professional services are governed by comprehensive service agreements that include:
+            </p>
+            <ul>
+                <li>Scope of work and deliverables specification</li>
+                <li>Timeline and milestone requirements</li>
+                <li>Intellectual property ownership and usage rights</li>
+                <li>Confidentiality and data protection protocols</li>
+                <li>Service level agreements and performance metrics</li>
+            </ul>
+
+            <h3>Data Protection & Privacy</h3>
+            <p>
+                TheFortThatHolds maintains strict privacy-first principles:
+            </p>
+            <ul>
+                <li>No data collection without explicit user consent</li>
+                <li>HIPAA-compliant architecture for healthcare applications</li>
+                <li>GDPR compliance for European Union users</li>
+                <li>Complete user data sovereignty and control</li>
+                <li>Transparent data usage and retention policies</li>
+            </ul>
+
+            <h3>Liability & Warranties</h3>
+            <p>
+                Professional services include appropriate liability coverage and performance warranties as 
+                specified in individual service agreements. Enterprise clients receive enhanced warranty 
+                coverage and dedicated support channels.
+            </p>
+        </div>
+
+        <!-- Business Compliance -->
+        <div class="legal-section">
+            <h2>Business Compliance & Standards</h2>
+            
+            <h3>Regulatory Compliance</h3>
+            <p>
+                TheFortThatHolds adheres to applicable regulations including:
+            </p>
+            <ul>
+                <li>Healthcare: HIPAA, HITECH Act compliance for medical AI systems</li>
+                <li>Privacy: GDPR, CCPA, and other regional privacy regulations</li>
+                <li>AI Ethics: Transparent AI development and deployment practices</li>
+                <li>Business: Standard commercial law and contractual obligations</li>
+            </ul>
+
+            <h3>Quality Assurance</h3>
+            <p>
+                All technologies and services undergo rigorous quality assurance including:
+            </p>
+            <ul>
+                <li>Trauma-informed design validation</li>
+                <li>Security and privacy impact assessments</li>
+                <li>Accessibility compliance testing</li>
+                <li>Performance and reliability verification</li>
+                <li>Ethical AI standards compliance</li>
+            </ul>
+        </div>
+
+        <!-- Terms of Service -->
+        <div class="legal-section">
+            <h2>Terms of Service</h2>
+            
+            <h3>Acceptable Use</h3>
+            <p>
+                Users of TheFortThatHolds technologies and services agree to:
+            </p>
+            <ul>
+                <li>Use technologies in accordance with licensing terms</li>
+                <li>Respect intellectual property rights and trademarks</li>
+                <li>Maintain ethical standards in AI deployment and usage</li>
+                <li>Report security vulnerabilities responsibly</li>
+                <li>Support humanitarian and community-first principles</li>
+            </ul>
+
+            <h3>Prohibited Uses</h3>
+            <p>
+                The following uses are strictly prohibited:
+            </p>
+            <ul>
+                <li>Surveillance capitalism or invasive data collection</li>
+                <li>Harmful AI applications or malicious deployment</li>
+                <li>Violation of user privacy or data sovereignty</li>
+                <li>Commercial use without appropriate licensing</li>
+                <li>Trademark infringement or IP violations</li>
+            </ul>
+        </div>
+
+        <!-- Commercial Licensing Contact -->
+        <div class="contact-box">
+            <h3>Commercial Licensing & Partnership Inquiries</h3>
+            <p>Ready to integrate TheFortThatHolds technology into your business?</p>
+            <a href="mailto:thefortthatholds@gmail.com?subject=Commercial%20Licensing%20Inquiry">
+                thefortthatholds@gmail.com
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="legal-section">
+            <h2>Legal Notice</h2>
+            <p>
+                This legal framework is effective as of January 31, 2025, and supersedes all previous 
+                licensing agreements. TheFortThatHolds reserves the right to update these terms with 
+                appropriate notice to existing licensees and users.
+            </p>
+            <p>
+                <strong>TheFortThatHolds</strong> operates under Jimmy Thornburg LLC, a limited liability 
+                company registered in the United States. All rights reserved.
+            </p>
+            
+            <div class="warning-box">
+                <h3>Enforcement Statement</h3>
+                <p>
+                    <strong>This legal framework and all associated intellectual property are actively protected. 
+                    Violations will be pursued through appropriate legal channels. All rights reserved.</strong>
+                </p>
+            </div>
+        </div>
+
+        <a href="/" class="back-button">
+            ← Back to Homepage
+        </a>
+    </div>
+</body>
+</html>

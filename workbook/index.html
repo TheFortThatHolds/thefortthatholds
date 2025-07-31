@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fort Workbook Professional - Trauma-informed recovery methodology for organizations and communities">
+    <title>Fort Workbook Professional - TheFortThatHolds</title>
+    
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --primary-purple: #7c3aed;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-light: #e5e7eb;
+            --gradient-primary: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            --humanitarian-gradient: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: #f8fafc;
+        }
+
+        .hero {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 100px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 20px;
+        }
+
+        .section-white {
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-blue);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+
+        .feature-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .humanitarian-section {
+            background: var(--humanitarian-gradient);
+            color: white;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .humanitarian-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 20 L60 40 L80 40 L65 55 L70 75 L50 65 L30 75 L35 55 L20 40 L40 40 Z" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .humanitarian-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .crisis-resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .crisis-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .crisis-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .crisis-flag {
+            font-size: 48px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .crisis-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .crisis-description {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .pricing-section {
+            background: #f8fafc;
+            padding: 100px 20px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .pricing-card {
+            background: white;
+            border: 2px solid var(--border-light);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--primary-blue);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary-blue);
+            transform: scale(1.05);
+        }
+
+        .pricing-badge {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            position: absolute;
+            top: -10px;
+            right: 20px;
+        }
+
+        .pricing-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .pricing-price {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .pricing-period {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 24px;
+            color: var(--text-secondary);
+            text-align: left;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary-blue);
+            padding: 16px 32px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+            margin: 40px 20px;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .features-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                TheFortThatHolds
+            </div>
+            <h1>Fort Workbook Professional</h1>
+            <p class="hero-subtitle">
+                Revolutionary trauma-informed recovery methodology designed for organizations, communities, 
+                and professionals committed to ethical healing practices.
+            </p>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">SpiralLogic™ Methodology</h2>
+                <p class="section-description">
+                    The first trauma-informed AI methodology, recognizing that healing is non-linear and deeply personal. 
+                    Built from real-world crisis experience and tested in humanitarian settings.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3 class="feature-title">Trauma-Informed Design</h3>
+                    <p class="feature-description">
+                        Every component designed with understanding of how trauma affects the nervous system, 
+                        cognition, and emotional regulation. No harmful "optimization" or forced productivity.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌀</div>
+                    <h3 class="feature-title">Recursive Recovery Logic</h3>
+                    <p class="feature-description">
+                        Acknowledges that healing spirals rather than progresses linearly. Built to support 
+                        the natural rhythms of integration, rest, and authentic growth.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Sovereignty-First Approach</h3>
+                    <p class="feature-description">
+                        Complete user autonomy and privacy protection. No surveillance, no data extraction, 
+                        no violation of therapeutic boundaries. Your healing belongs to you.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏗️</div>
+                    <h3 class="feature-title">Architectural Framework</h3>
+                    <p class="feature-description">
+                        Not just self-help—comprehensive blueprints for building protective thought systems 
+                        and sustainable recovery practices for individuals and organizations.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3 class="feature-title">Community Integration</h3>
+                    <p class="feature-description">
+                        Designed for implementation in therapeutic practices, healthcare organizations, 
+                        and community support networks while maintaining individual privacy.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Evidence-Based Results</h3>
+                    <p class="feature-description">
+                        Tested in real-world crisis scenarios including war trauma, displacement, and 
+                        collective healing. Professional outcomes tracking and impact measurement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Humanitarian Section -->
+    <section class="humanitarian-section">
+        <div class="humanitarian-container">
+            <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 24px;">Free Crisis Resources</h2>
+            <p style="font-size: 18px; opacity: 0.9; margin-bottom: 40px;">
+                When communities face active war, displacement, and collective trauma, healing cannot wait for commercial solutions. 
+                These crisis-adapted workbooks are provided free of charge to populations experiencing ongoing crisis.
+            </p>
+            
+            <div class="crisis-resources">
+                <div class="crisis-card">
+                    <span class="crisis-flag">🇵🇸</span>
+                    <h3 class="crisis-title">Palestinian Crisis Workbook</h3>
+                    <p class="crisis-description">
+                        Trauma recovery adapted for Palestinians experiencing occupation, displacement, and resistance
+                    </p>
+                </div>
+                <div class="crisis-card">
+                    <span class="crisis-flag">🇺🇦</span>
+                    <h3 class="crisis-title">Ukrainian War Workbook</h3>
+                    <p class="crisis-description">
+                        Specialized support for Ukrainian war survivors and displaced populations
+                    </p>
+                </div>
+                <div class="crisis-card">
+                    <span class="crisis-flag">🇸🇩</span>
+                    <h3 class="crisis-title">Sudanese Crisis Workbook</h3>
+                    <p class="crisis-description">
+                        Recovery tools for survivors of Sudan's displacement crisis
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Pricing -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Implementations</h2>
+                <p class="section-description">
+                    Choose the implementation level that matches your organization's needs and commitment to 
+                    trauma-informed practices. All tiers include humanitarian resource access.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Individual Professional</h3>
+                    <div class="pricing-price">$297</div>
+                    <div class="pricing-period">one-time</div>
+                    <ul class="pricing-features">
+                        <li>Complete Fort Workbook Professional</li>
+                        <li>SpiralLogic methodology training</li>
+                        <li>Personal implementation guide</li>
+                        <li>Crisis resource access</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="mailto:thefortthatholds@gmail.com?subject=Individual%20Professional%20Inquiry" class="btn-secondary">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <h3 class="pricing-title">Organizational License</h3>
+                    <div class="pricing-price">$2,997</div>
+                    <div class="pricing-period">per year</div>
+                    <ul class="pricing-features">
+                        <li>Up to 50 professional users</li>
+                        <li>Organizational training program</li>
+                        <li>Custom implementation consulting</li>
+                        <li>Priority support and updates</li>
+                        <li>Impact measurement tools</li>
+                        <li>Quarterly review sessions</li>
+                    </ul>
+                    <a href="mailto:thefortthatholds@gmail.com?subject=Organizational%20License%20Inquiry" class="btn-primary">Schedule Consultation</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Enterprise Partnership</h3>
+                    <div class="pricing-price">Custom</div>
+                    <div class="pricing-period">contact sales</div>
+                    <ul class="pricing-features">
+                        <li>Unlimited organizational users</li>
+                        <li>Custom workbook development</li>
+                        <li>Dedicated account management</li>
+                        <li>Advanced integration support</li>
+                        <li>Professional training certification</li>
+                        <li>Strategic consulting partnership</li>
+                    </ul>
+                    <a href="mailto:thefortthatholds@gmail.com?subject=Enterprise%20Partnership%20Inquiry" class="btn-secondary">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Support -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Implementation Support</h2>
+                <p class="section-description">
+                    Comprehensive support for integrating Fort methodology into your practice, organization, 
+                    or community health system with ethical standards and measurable outcomes.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3 class="feature-title">Professional Training</h3>
+                    <p class="feature-description">
+                        Comprehensive certification program for therapists, social workers, healthcare professionals, 
+                        and community leaders implementing trauma-informed practices.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏥</div>
+                    <h3 class="feature-title">Healthcare Integration</h3>
+                    <p class="feature-description">
+                        HIPAA-compliant integration with existing healthcare systems, electronic health records, 
+                        and therapeutic practice management platforms.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Impact Measurement</h3>
+                    <p class="feature-description">
+                        Professional outcome tracking, progress measurement, and impact reporting tools 
+                        designed for clinical and organizational effectiveness assessment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="/" class="back-button">
+        ← Return to Homepage
+    </a>
+</body>
+</html>
